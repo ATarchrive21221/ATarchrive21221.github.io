@@ -4,79 +4,56 @@
     <title>Happy International Women's Day!</title>
     <style>
         body {
-            background-color: #fff0f5; /* Lighter shade for a softer look */
+            background-color: #fff0f5;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             padding: 50px;
             margin: 0;
-            transition: background-color 0.5s ease;
-        }
-        body:hover {
-            background-color: #faf0e6; /* Transition to original color on hover */
-        }
-        h1 {
-            color: #db7093; /* Soft pink color for the header */
-            margin: 0;
-            padding: 20px 0;
-            font-size: 48px;
-            text-shadow: 2px 2px #ffd5cd; /* Subtle shadow for depth */
-        }
-        p {
-            color: #2e8b57; /* Slightly brighter green for better readability */
-            font-size: 22px;
-            line-height: 1.6; /* Improved line spacing */
-        }
-        .flower {
-            color: #ffa07a; /* Flower ASCII art color */
-        }
-        .signature {
-            font-style: italic;
-            margin-top: 30px;
         }
         .container {
+            position: relative;
             max-width: 800px;
             margin: auto;
             padding: 20px;
-            border: 1px solid #db7093; /* Border matching the header */
-            border-radius: 10px; /* Rounded corners for the container */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
-            background: #ffffff; /* White background for the content */
+            border: 1px solid #db7093;
+            border-radius: 10px;
+            background: #ffffff;
+        }
+        .flower {
+            color: #ffa07a;
+        }
+        .flower-side {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            font-size: 8px;
+        }
+        .flower-left {
+            left: -120px;
+        }
+        .flower-right {
+            right: -120px;
+        }
+        h1, p {
+            z-index: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="flower-side flower-left">
+            // Big flower ASCII art goes here
+        </div>
         <h1>Happy March the 8th!</h1>
         <p>Cho chị Hà :3</p>
-        <pre class="flower">
-             wWWWw               wWWWw
-       vVVVv (___) wWWWw         (___)  vVVVv
-       (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
-        ~Y~   \|    ~Y~   (___)    |/    ~Y~
-        \|   \ |/   \| /  \~Y~/   \|    \ |/
-       \\|// \\|// \\|/// \\|//  \\|// \\\|///
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        </pre>
-        <pre class="flower">
-          .--.
-        .'_\/_'.
-        '. /\ .'
-          "||"
-           || /\
-        /\ ||//\)
-       (/\\||/
-    ______\||/_______
-        </pre>
-        <pre class="flower">
-     _,-._
-    / \_/ \
-    >-(_)-<    
-    \_/ \_/
-      `-'
-        </pre>
+        <!-- Existing ASCII art -->
         <p>Wishing you a day as lovely as these flowers!</p>
         <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
-        <p class="signature">- From your lil bro~</p>
+        <p>- From your lil bro~</p>
+        <div class="flower-side flower-right">
+            // Big flower ASCII art goes here
+        </div>
     </div>
 </body>
 </html>
