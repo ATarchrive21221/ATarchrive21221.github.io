@@ -10,6 +10,24 @@
       100% { background-position: 0% 50%; }
     }
 
+    @keyframes flowerAnimation1 {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-5px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+
+    @keyframes flowerAnimation2 {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-3px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+
+    @keyframes flowerAnimation3 {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(180deg); }
+      100% { transform: translateY(0) rotate(360deg); }
+    }
+
     body {
       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
       background-size: 400% 400%;
@@ -27,6 +45,23 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
+    }
+
+    .flower {
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .flower:nth-child(1) {
+      animation-name: flowerAnimation1;
+    }
+
+    .flower:nth-child(2) {
+      animation-name: flowerAnimation2;
+    }
+
+    .flower:nth-child(3) {
+      animation-name: flowerAnimation3;
     }
   </style>
 </head>
