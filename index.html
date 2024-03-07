@@ -2,83 +2,91 @@
 <html>
 <head>
   <title>Happy International Women's Day!</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!-- Google Fonts -->
-    <style>
-      /* Your existing CSS styles */
-      @keyframes gradientBackground {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
-      body {
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-        animation: gradientBackground 15s ease infinite;
-      }
+    body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradientBackground 15s ease infinite;
+    }
 
-      /* Rest of your CSS styles */
-    </style>
-     <script>
-        /* Your existing JavaScript code */
-        window.onload = function() {
-            var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
-            var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
-            var currentIndex = 0;
-            setInterval(function() {
-                document.body.style.backgroundColor = colors[currentIndex];
-                document.querySelector('h1').style.color = textColors[currentIndex];
-                currentIndex = (currentIndex + 1) % colors.length;
-            }, 1000);
-        };
+    .container {
+      text-align: center;
+      padding: 50px;
+      color: white;
+    }
 
-        // New function to toggle visibility of the content
-        function toggleContent() {
-            var content = document.getElementById("content");
-            if (content.style.display === "none") {
-                content.style.display = "block";
-            } else {
-                content.style.display = "none";
-            }
-        }
-    </script>
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Happy March the 8th!</h1>
-        <button onclick="toggleContent()">Click to reveal</button> <!-- New button to trigger the content display -->
-        <div id="content" style="display: none;"> <!-- Wrap the content in a div and hide it initially -->
-            <p>Cho chị Hà :3</p>
-            <pre class="flower">
-             wWWWw               wWWWw
-       vVVVv (___) wWWWw         (___)  vVVVv
-       (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
-        ~Y~   \|    ~Y~   (___)    |/    ~Y~
-        \|   \ |/   \| /  \~Y~/   \|    \ |/
-       \\|// \\|// \\|/// \\|//  \\|// \\\|///
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-            </pre>
-            <pre class="flower">
-              .--.
-            .'_\/_'.
-            '. /\ .'
-              "||"
-               || /\
-            /\ ||//\)
-           (/\\||/
-        ______\||/_______
-            </pre>
-            <pre class="flower">
-         _,-._
-        / \_/ \
-        >-(_)-<    
-        \_/ \_/
-          `-'
-            </pre>
-            <p>Wishing you a day as lovely as these flowers!</p>
-            <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
-            <p class="signature">- From your lil bro~</p>
-        </div>
+  <script>
+    window.onload = function() {
+      var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
+      var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
+      var currentIndex = 0;
+
+      function updateColors() {
+        document.body.style.backgroundColor = colors[currentIndex];
+        document.querySelector('h1').style.color = textColors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+        requestAnimationFrame(updateColors);
+      }
+
+      updateColors(); // Start the color update loop
+    };
+
+    function toggleContent() {
+      var content = document.getElementById("content");
+      content.style.display = content.style.display === "none" ? "block" : "none";
+    }
+  </script>
+  <div class="container">
+    <h1>Happy March the 8th!</h1>
+    <button onclick="toggleContent()">Click to reveal</button>
+    <div id="content" style="display: none;">
+      <p>Cho chị Hà :3</p>
+      <pre class="flower">
+       wWWWw               wWWWw
+ vVVVv (___) wWWWw         (___)  vVVVv
+ (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
+  ~Y~   \|    ~Y~   (___)    |/    ~Y~
+  \|   \ |/   \| /  \~Y~/   \|    \ |/
+ \\|// \\|// \\|/// \\|//  \\|// \\\|///
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      </pre>
+      <pre class="flower">
+        .--.
+      .'_\/_'.
+      '. /\ .'
+        "||"
+         || /\
+      /\ ||//\)
+     (/\\||/
+  ______\||/_______
+      </pre>
+      <pre class="flower">
+       _,-._
+      / \_/ \
+      >-(_)-<    
+      \_/ \_/
+        `-'
+      </pre>
+      <p>Wishing you a day as lovely as these flowers!</p>
+      <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
+      <p class="signature">- From your lil bro~</p>
     </div>
+  </div>
 </body>
 </html>
