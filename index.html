@@ -4,69 +4,52 @@
   <title>Happy International Women's Day!</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!-- Google Fonts -->
     <style>
+      /* Your existing CSS styles */
       @keyframes gradientBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
 
-body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradientBackground 15s ease infinite;
-}
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradientBackground 15s ease infinite;
+      }
 
-      
-        h1 {
-            color: #db7093;
-            margin: 0;
-            padding: 20px 0;
-            font-size: 48px;
-            text-shadow: 2px 2px #ffd5cd;
-            animation: fadeIn 2s; /* Fade in animation */
-        }
-        p {
-            color: #2e8b57;
-            font-size: 22px;
-            line-height: 1.8; /* Increased line height */
-            letter-spacing: 1.2px; /* Added letter spacing */
-        }
-        .flower {
-            color: #ffa07a; /* Flower ASCII art color */
-        }
-        .signature {
-            font-style: italic;
-            margin-top: 30px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #db7093; /* Border matching the header */
-            border-radius: 10px; /* Rounded corners for the container */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
-            background: #ffffff; /* White background for the content */
-        }
+      /* Rest of your CSS styles */
     </style>
      <script>
-window.onload = function() {
-    var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
-    var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
-    var currentIndex = 0;
-    setInterval(function() {
-        document.body.style.backgroundColor = colors[currentIndex];
-        document.querySelector('h1').style.color = textColors[currentIndex];
-        currentIndex = (currentIndex + 1) % colors.length;
-    }, 1000);
-};
+        /* Your existing JavaScript code */
+        window.onload = function() {
+            var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
+            var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
+            var currentIndex = 0;
+            setInterval(function() {
+                document.body.style.backgroundColor = colors[currentIndex];
+                document.querySelector('h1').style.color = textColors[currentIndex];
+                currentIndex = (currentIndex + 1) % colors.length;
+            }, 1000);
+        };
 
+        // New function to toggle visibility of the content
+        function toggleContent() {
+            var content = document.getElementById("content");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
     </script>
 </head>
 <body>
     <div class="container">
         <h1>Happy March the 8th!</h1>
-        <p>Cho chị Hà :3</p>
-        <pre class="flower">
+        <button onclick="toggleContent()">Click to reveal</button> <!-- New button to trigger the content display -->
+        <div id="content" style="display: none;"> <!-- Wrap the content in a div and hide it initially -->
+            <p>Cho chị Hà :3</p>
+            <pre class="flower">
              wWWWw               wWWWw
        vVVVv (___) wWWWw         (___)  vVVVv
        (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
@@ -74,27 +57,28 @@ window.onload = function() {
         \|   \ |/   \| /  \~Y~/   \|    \ |/
        \\|// \\|// \\|/// \\|//  \\|// \\\|///
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        </pre>
-        <pre class="flower">
-          .--.
-        .'_\/_'.
-        '. /\ .'
-          "||"
-           || /\
-        /\ ||//\)
-       (/\\||/
-    ______\||/_______
-        </pre>
-        <pre class="flower">
-     _,-._
-    / \_/ \
-    >-(_)-<    
-    \_/ \_/
-      `-'
-        </pre>
-        <p>Wishing you a day as lovely as these flowers!</p>
-        <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
-        <p class="signature">- From your lil bro~</p>
+            </pre>
+            <pre class="flower">
+              .--.
+            .'_\/_'.
+            '. /\ .'
+              "||"
+               || /\
+            /\ ||//\)
+           (/\\||/
+        ______\||/_______
+            </pre>
+            <pre class="flower">
+         _,-._
+        / \_/ \
+        >-(_)-<    
+        \_/ \_/
+          `-'
+            </pre>
+            <p>Wishing you a day as lovely as these flowers!</p>
+            <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
+            <p class="signature">- From your lil bro~</p>
+        </div>
     </div>
 </body>
 </html>
