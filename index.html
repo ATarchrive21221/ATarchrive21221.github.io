@@ -44,16 +44,15 @@
         }
     </style>
      <script>
-       window.onload = function() {
-    var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"]; // Add as many colors as you like
-    var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"]; // Corresponding colors for the text
+window.onload = function() {
+    var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
+    var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
     var currentIndex = 0;
     setInterval(function() {
         document.body.style.backgroundColor = colors[currentIndex];
-        document.querySelector('h1').style.color = textColors[currentIndex]; // Change h1 color
-        currentIndex++;
-        if (currentIndex == colors.length) currentIndex = 0;
-    }, 1000); // Change color every 1000 milliseconds (1 second)
+        document.querySelector('h1').style.color = textColors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+    }, 1000);
 };
 
     </script>
