@@ -115,12 +115,18 @@
 }
 
 function createConfetti() {
+  let centerX = window.innerWidth / 2;
+  let centerY = window.innerHeight / 2;
+
   for (let i = 0; i < 50; i++) {
+    let angle = Math.random() * Math.PI * 2;
+    let distance = Math.random() * 200; // Maximum distance from the center
+
     let confetti = document.createElement("div");
     confetti.classList.add("confetti");
-    confetti.style.left = Math.random() * window.innerWidth + "px";
-    confetti.style.top = "0";
-    confetti.style.animationDelay = Math.random() * 3 + "s";
+    confetti.style.left = centerX + distance * Math.cos(angle) + "px";
+    confetti.style.top = centerY + distance * Math.sin(angle) + "px";
+    confetti.style.animationDelay = Math.random() * 1 + "s";
     document.body.appendChild(confetti);
 
     confetti.addEventListener("animationend", function () {
@@ -128,6 +134,7 @@ function createConfetti() {
     });
   }
 }
+
 
 
   </script>
