@@ -4,61 +4,31 @@
   <title>Happy International Women's Day!</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    @keyframes gradientBackground {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    body {
-      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-      background-size: 400% 400%;
-      animation: gradientBackground 15s ease infinite;
-    }
-
-    .container {
-      text-align: center;
-      padding: 50px;
-      color: white;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
+    /* Your existing CSS styles */
     .flower {
       font-family: monospace;
       white-space: pre;
     }
+    /* Rest of your CSS styles */
   </style>
 </head>
 <body>
   <script>
     window.onload = function() {
-      var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
-      var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
-      var currentIndex = 0;
-
-      setInterval(function() {
-        document.body.style.backgroundColor = colors[currentIndex];
-        document.querySelector('h1').style.color = textColors[currentIndex];
-        currentIndex = (currentIndex + 1) % colors.length;
-      }, 3000); // Color update every 3 seconds
-
+      // Your existing JavaScript code
       animateFlowers(); // Start the flower animation
     };
 
-    function toggleContent() {
-      var content = document.getElementById("content");
-      content.style.display = content.style.display === "none" ? "block" : "none";
-    }
-
+    // New function to animate ASCII flowers
     function animateFlowers() {
       var flowers = document.querySelectorAll('.flower');
-      var frames = ['frame1', 'frame2', 'frame3']; // Replace with your ASCII art frames
+      var frames = [
+        // Replace these strings with the actual ASCII art frames
+        'frame1',
+        'frame2',
+        'frame3',
+        // Add all 10 frames here
+      ];
       var currentFrame = 0;
 
       setInterval(function() {
@@ -66,28 +36,11 @@
           flower.textContent = frames[currentFrame];
         });
         currentFrame = (currentFrame + 1) % frames.length;
-      }, 1000); // Change frame every second
+      }, 500); // Change frame every 500 milliseconds
     }
+
+    // Rest of your JavaScript code
   </script>
-  <div class="container">
-    <h1>Happy March the 8th!</h1>
-    <button onclick="toggleContent()">Click to reveal</button>
-    <div id="content" style="display: none;">
-      <p>Cho chị Hà :3</p>
-      <pre class="flower">
-       wWWWw               wWWWw
- vVVVv (___) wWWWw         (___)  vVVVv
- (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
-  ~Y~   \|    ~Y~   (___)    |/    ~Y~
-  \|   \ |/   \| /  \~Y~/   \|    \ |/
- \\|// \\|// \\|/// \\|//  \\|// \\\|///
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-      </pre>
-      <!-- Add more ASCII art frames here -->
-      <p>Wishing you a day as lovely as these flowers!</p>
-      <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
-      <p class="signature">- From your lil bro~</p>
-    </div>
-  </div>
+  <!-- Your existing HTML content -->
 </body>
 </html>
