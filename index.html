@@ -15,9 +15,8 @@
       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
       background-size: 400% 400%;
       animation: gradientBackground 15s ease infinite;
+      font-family: 'Roboto', sans-serif; /* Ensuring consistent font */
     }
-
-    /* ... other original styles ... */
 
     /* Envelope styles */
     .envelope-container {
@@ -35,6 +34,7 @@
       transition: transform 0.7s;
       transform-style: preserve-3d;
       cursor: pointer;
+      background: #f2f2f2; /* Added background color */
     }
 
     .front, .back {
@@ -44,8 +44,10 @@
     }
 
     .front {
-      background: #f2f2f2;
-      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px; /* Fixed height for the front flap */
     }
 
     .back {
@@ -58,35 +60,27 @@
       padding: 20px;
       border: 1px solid #ccc;
       margin-top: 20px;
+      background: #ffffff; /* Ensuring content background is white */
     }
 
     /* ASCII Art styles */
     pre.flower {
       font-family: 'Courier New', monospace;
       white-space: pre;
+      margin: 0; /* Remove default margin */
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 768px) {
+      .envelope-container {
+        width: 90%; /* Full width on smaller screens */
+      }
     }
 
     /* ... other styles as needed ... */
   </style>
 </head>
 <body>
-  <!-- Original body content -->
-  <div class="container">
-    <h1>Happy March the 8th!</h1>
-    <p>Cho chị Hà :3</p>
-    <!-- ASCII Art -->
-    <pre class="flower">
-         wWWWw               wWWWw
-   vVVVv (___) wWWWw         (___)  vVVVv
-   (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
-    ~Y~   \|    ~Y~   (___)    |/    ~Y~
-    \|   \ |/   \| /  \~Y~/   \|    \ |/
-   \\|// \\|// \\|/// \\|//  \\|// \\\|///
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    </pre>
-    <!-- ... other original content ... -->
-  </div>
-
   <!-- Envelope and content -->
   <div class="envelope-container">
     <div class="envelope" onclick="openEnvelope()">
@@ -97,6 +91,16 @@
       <!-- Your content here -->
       <h1>Happy March the 8th!</h1>
       <p>Cho chị Hà :3</p>
+      <!-- ASCII Art -->
+      <pre class="flower">
+           wWWWw               wWWWw
+     vVVVv (___) wWWWw         (___)  vVVVv
+     (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
+      ~Y~   \|    ~Y~   (___)    |/    ~Y~
+      \|   \ |/   \| /  \~Y~/   \|    \ |/
+     \\|// \\|// \\|/// \\|//  \\|// \\\|///
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      </pre>
       <!-- ... other content ... -->
     </div>
   </div>
