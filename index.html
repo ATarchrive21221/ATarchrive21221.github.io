@@ -10,27 +10,28 @@
       }
     }
 
-    .windmill, .blade {
+    .windmill {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform-origin: center;
-    }
-
-    .windmill {
       width: 200px;
       height: 200px;
       margin: -100px 0 0 -100px;
       background: #fff;
       border: 2px solid #333;
       border-radius: 50%;
+      transform-origin: center;
+      animation: rotate 5s linear infinite;
     }
 
     .blade {
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
       width: 120px;
       height: 10px;
       background: #333;
-      animation: rotate 5s linear infinite;
+      transform-origin: bottom right;
     }
 
     .blade:nth-child(2) {
@@ -73,6 +74,9 @@
       white-space: pre;
     }
 
+    /* Rest of your existing styles */
+    /* ... */
+
   </style>
 </head>
 <body>
@@ -86,32 +90,8 @@
   <div class="container">
     <h1>Happy March the 8th!</h1>
     <p>Cho chị Hà :3</p>
-    <pre class="flower">
-      <span style="color: #FFA07A;">     wWWWw               wWWWw</span>
-      <span style="color: #FFA07A;">vVVVv (___) wWWWw         (___)  vVVVv</span>
-      <span style="color: #FFA07A;">(___)</span><span style="color: #DB7093;">  ~Y~  </span><span style="color: #FFA07A;">(___)</span><span style="color: #DB7093;">  vVVVv   ~Y~   </span><span style="color: #FFA07A;">(___)</span>
-      <span style="color: #DB7093;"> ~Y~   \|    ~Y~   </span><span style="color: #FFA07A;">(___)</span><span style="color: #DB7093;">    |/    ~Y~</span>
-      <span style="color: #DB7093;"> \|   \ |/   \| /  \~Y~/   \|    \ |/</span>
-      <span style="color: #DB7093;">\\|// \\|// \\|/// \\|//  \\|// \\\|///</span>
-      <span style="color: #DB7093;">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span>
-    </pre>
-    <pre class="flower">
-      <span style="color: #FFD700;">  .--.</span>
-      <span style="color: #FFD700;">.'_\/_'.</span>
-      <span style="color: #FFD700;">'. /\ .'</span>
-      <span style="color: #FFD700;">  "||"</span>
-      <span style="color: #FFD700;">   || /\</span>
-      <span style="color: #FFD700;">/\ ||//\)</span>
-      <span style="color: #FFD700;">(/\\||/</span>
-      <span style="color: #FFD700;">______\||/_______</span>
-    </pre>
-    <pre class="flower">
-      <span style="color: #98FB98;"> _,-._</span>
-      <span style="color: #98FB98;">/ \_/ \</span>
-      <span style="color: #98FB98;">>-(_)-<</span>    
-      <span style="color: #98FB98;">\_/ \_/</span>
-      <span style="color: #98FB98;">  `-'</span>
-    </pre>
+    <!-- ASCII flowers and other content -->
+    <!-- ... -->
     <p>Wishing you a day as lovely as these flowers!</p>
     <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
     <p class="signature">- From your lil bro~</p>
