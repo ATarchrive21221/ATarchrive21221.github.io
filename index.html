@@ -43,6 +43,17 @@
             background: #ffffff; /* White background for the content */
         }
     </style>
+     <script>
+        window.onload = function() {
+            var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"]; // Add as many colors as you like
+            var currentIndex = 0;
+            setInterval(function() {
+                document.body.style.backgroundColor = colors[currentIndex];
+                currentIndex++;
+                if (currentIndex == colors.length) currentIndex = 0;
+            }, 1000); // Change color every 1000 milliseconds (1 second)
+        };
+    </script>
 </head>
 <body>
     <div class="container">
