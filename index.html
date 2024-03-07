@@ -2,99 +2,99 @@
 <html>
 <head>
   <title>Happy International Women's Day!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    @keyframes rotate {
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <style>
+      @keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    .windmill {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 200px;
-      height: 200px;
-      margin: -100px 0 0 -100px;
-      background: #fff;
-      border: 2px solid #333;
-      border-radius: 50%;
-      transform-origin: center;
-      animation: rotate 5s linear infinite;
-    }
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+}
 
-    .blade {
-      position: absolute;
-      bottom: 50%;
-      right: 50%;
-      width: 120px;
-      height: 10px;
-      background: #333;
-      transform-origin: bottom right;
-    }
+      
+        h1 {
+            color: #db7093;
+            margin: 0;
+            padding: 20px 0;
+            font-size: 48px;
+            text-shadow: 2px 2px #ffd5cd;
+            animation: fadeIn 2s; /* Fade in animation */
+        }
+        p {
+            color: #2e8b57;
+            font-size: 22px;
+            line-height: 1.8; /* Increased line height */
+            letter-spacing: 1.2px; /* Added letter spacing */
+        }
+        .flower {
+            color: #ffa07a; /* Flower ASCII art color */
+        }
+        .signature {
+            font-style: italic;
+            margin-top: 30px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #db7093; /* Border matching the header */
+            border-radius: 10px; /* Rounded corners for the container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
+            background: #ffffff; /* White background for the content */
+        }
+    </style>
+     <script>
+window.onload = function() {
+    var colors = ["#fff0f5", "#faf0e6", "#add8e6", "#90ee90"];
+    var textColors = ["#db7093", "#ff69b4", "#ff1493", "#c71585"];
+    var currentIndex = 0;
+    setInterval(function() {
+        document.body.style.backgroundColor = colors[currentIndex];
+        document.querySelector('h1').style.color = textColors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+    }, 1000);
+};
 
-    .blade:nth-child(2) {
-      transform: rotate(90deg);
-    }
-
-    .blade:nth-child(3) {
-      transform: rotate(180deg);
-    }
-
-    .blade:nth-child(4) {
-      transform: rotate(270deg);
-    }
-
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: skyblue;
-      overflow: hidden;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #db7093;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background: #ffffff;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* ASCII flowers with more realistic colors */
-    .flower span {
-      font-family: monospace;
-      white-space: pre;
-    }
-
-    /* Rest of your existing styles */
-    /* ... */
-
-  </style>
+    </script>
 </head>
 <body>
-  <div class="windmill">
-    <div class="blade"></div>
-    <div class="blade"></div>
-    <div class="blade"></div>
-    <div class="blade"></div>
-  </div>
-
-  <div class="container">
-    <h1>Happy March the 8th!</h1>
-    <p>Cho chị Hà :3</p>
-    <!-- ASCII flowers and other content -->
-    <!-- ... -->
-    <p>Wishing you a day as lovely as these flowers!</p>
-    <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
-    <p class="signature">- From your lil bro~</p>
-  </div>
+    <div class="container">
+        <h1>Happy March the 8th!</h1>
+        <p>Cho chị Hà :3</p>
+        <pre class="flower">
+             wWWWw               wWWWw
+       vVVVv (___) wWWWw         (___)  vVVVv
+       (___)  ~Y~  (___)  vVVVv   ~Y~   (___)
+        ~Y~   \|    ~Y~   (___)    |/    ~Y~
+        \|   \ |/   \| /  \~Y~/   \|    \ |/
+       \\|// \\|// \\|/// \\|//  \\|// \\\|///
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        </pre>
+        <pre class="flower">
+          .--.
+        .'_\/_'.
+        '. /\ .'
+          "||"
+           || /\
+        /\ ||//\)
+       (/\\||/
+    ______\||/_______
+        </pre>
+        <pre class="flower">
+     _,-._
+    / \_/ \
+    >-(_)-<    
+    \_/ \_/
+      `-'
+        </pre>
+        <p>Wishing you a day as lovely as these flowers!</p>
+        <p>May your day be filled with joy, laughter, and love. Happy International Women's Day!</p>
+        <p class="signature">- From your lil bro~</p>
+    </div>
 </body>
 </html>
