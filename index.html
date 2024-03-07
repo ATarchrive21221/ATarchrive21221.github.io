@@ -67,6 +67,23 @@
   font-weight: bold;
   font-family: 'Roboto', sans-serif; /* Use the Roboto font */
 }
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #f00; /* Confetti color */
+  border-radius: 50%;
+  animation: confetti-fall 3s linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
 
 
   </style>
@@ -88,9 +105,28 @@
     };
 
     function toggleContent() {
-      var content = document.getElementById("content");
-      content.style.display = content.style.display === "none" ? "block" : "none";
-    }
+  var content = document.getElementById("content");
+  content.style.display = content.style.display === "none" ? "block" : "none";
+
+  if (content.style.display === "block") {
+    createConfetti();
+  }
+}
+
+function createConfetti() {
+  for (let i = 0; i < 50; i++) {
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    confetti.style.left = Math.random() * window.innerWidth + "px";
+    confetti.style.animationDelay = Math.random() * 3 + "s";
+    document.body.appendChild(confetti);
+
+    confetti.addEventListener("animationend", function () {
+      confetti.remove();
+    });
+  }
+}
+
   </script>
   <div class="container">
     <h1>Happy March the 8th!</h1>
@@ -136,7 +172,7 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXkdlcc:coONMMMMMMMMMMMMMMMMMMMMM
       </pre>
       
  <p><span class="highlight" style="color: black;">Wishing you a day as lovely as this handmade flower!(mất 1 tiếng ngồi vẽ đấy!)</span></p>
-<p><span class="highlight">May your day be filled with joy, laughter, and love. Happy International Women's Day!</span></p>
+<p><span class="highlight" style="color: black;">May your day be filled with joy, laughter, and love. Happy International Women's Day!</span></p>
 <p class="signature"><span class="highlight">- From your lil bro~</span></p>
 
 
