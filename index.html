@@ -114,6 +114,7 @@
 }
 
 
+
   </style>
 </head>
 <body>
@@ -150,36 +151,35 @@ function createConfetti() {
     let distance = Math.random() * 200; // Maximum distance from the center
     let size = Math.random() * 10 + 5; // Random size between 5 and 15px
 
-    if (Math.random() < 0.5) {
-      // Create confetti
-      let confetti = document.createElement("div");
-      confetti.classList.add("confetti");
-      confetti.style.left = centerX + distance * Math.cos(angle) + "px";
-      confetti.style.top = centerY + distance * Math.sin(angle) + "px";
-      confetti.style.width = size + "px";
-      confetti.style.height = size + "px";
-      confetti.style.background = getRandomColor(); // Random color
-      confetti.style.animationDelay = Math.random() * 1 + "s";
-      document.body.appendChild(confetti);
+    // Create confetti
+    let confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    confetti.style.left = centerX + distance * Math.cos(angle) + "px";
+    confetti.style.top = centerY + distance * Math.sin(angle) + "px";
+    confetti.style.width = size + "px";
+    confetti.style.height = size + "px";
+    confetti.style.background = getRandomColor(); // Random color
+    confetti.style.animationDelay = Math.random() * 1 + "s";
+    document.body.appendChild(confetti);
 
-      confetti.addEventListener("animationend", function () {
-        confetti.remove();
-      });
-    } else {
-      // Create raindrop
-      let raindrop = document.createElement("div");
-      raindrop.classList.add("raindrop");
-      raindrop.style.left = centerX + distance * Math.cos(angle) + "px";
-      raindrop.style.top = centerY + distance * Math.sin(angle) + "px";
-      raindrop.style.animationDelay = Math.random() * 1 + "s";
-      document.body.appendChild(raindrop);
+    confetti.addEventListener("animationend", function () {
+      confetti.remove();
+    });
 
-      raindrop.addEventListener("animationend", function () {
-        raindrop.remove();
-      });
-    }
+    // Create raindrop
+    let raindrop = document.createElement("div");
+    raindrop.classList.add("raindrop");
+    raindrop.style.left = Math.random() * window.innerWidth + "px";
+    raindrop.style.top = "-10px"; // Start raindrop above the window
+    raindrop.style.animationDelay = Math.random() * 1 + "s";
+    document.body.appendChild(raindrop);
+
+    raindrop.addEventListener("animationend", function () {
+      raindrop.remove();
+    });
   }
 }
+
 
 function getRandomColor() {
   let letters = "0123456789ABCDEF";
